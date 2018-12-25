@@ -64,7 +64,7 @@ public class GunYMLLoader {
 									? ChatColor.translateAlternateColorCodes('&', f2.getString("displayname"))
 									: (ChatColor.WHITE + name);
 							final List<String> extraLore2 = f2.contains("lore") ? f2.getStringList("lore") : null;
-							final List<String> extraLore = new ArrayList<String>();
+							final List<String> extraLore = new ArrayList<>();
 							try {
 								for (String lore : extraLore2) {
 									extraLore.add(ChatColor.translateAlternateColorCodes('&', lore));
@@ -121,7 +121,7 @@ public class GunYMLLoader {
 									? ChatColor.translateAlternateColorCodes('&', f2.getString("displayname"))
 									: (ChatColor.WHITE + name);
 							final List<String> rawLore = f2.contains("lore") ? f2.getStringList("lore") : null;
-							final List<String> lore = new ArrayList<String>();
+							final List<String> lore = new ArrayList<>();
 							try {
 								for (String lore2 : rawLore) {
 									lore.add(ChatColor.translateAlternateColorCodes('&', lore2));
@@ -164,7 +164,7 @@ public class GunYMLLoader {
 									? ChatColor.translateAlternateColorCodes('&', f2.getString("displayname"))
 									: (ChatColor.WHITE + name);
 							final List<String> rawLore = f2.contains("lore") ? f2.getStringList("lore") : null;
-							final List<String> lore = new ArrayList<String>();
+							final List<String> lore = new ArrayList<>();
 							try {
 								for (String lore2 : rawLore) {
 									lore.add(ChatColor.translateAlternateColorCodes('&', lore2));
@@ -226,7 +226,7 @@ public class GunYMLLoader {
 							? ChatColor.translateAlternateColorCodes('&', f2.getString("displayname"))
 							: (ChatColor.GOLD + name);
 					final List<String> extraLore2 = f2.contains("lore") ? f2.getStringList("lore") : null;
-					final List<String> extraLore = new ArrayList<String>();
+					final List<String> extraLore = new ArrayList<>();
 
 					try {
 						for (String lore : extraLore2) {
@@ -411,7 +411,7 @@ public class GunYMLLoader {
 							}
 						}
 
-						final List<String> extraLore = new ArrayList<String>();
+						final List<String> extraLore = new ArrayList<>();
 						try {
 							for (String lore : extraLore2) {
 								extraLore.add(ChatColor.translateAlternateColorCodes('&', lore));

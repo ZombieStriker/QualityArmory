@@ -414,7 +414,7 @@ public class ReflectionsUtil {
 		 *            the arguments to pass to the constructor.
 		 * @return the constructed object.
 		 */
-		public Object invoke(Object... arguments);
+        Object invoke(Object... arguments);
 	}
 
 	/**
@@ -430,7 +430,7 @@ public class ReflectionsUtil {
 		 *            the arguments to pass to the method.
 		 * @return the return value, or NULL if is void.
 		 */
-		public Object invoke(Object target, Object... arguments);
+        Object invoke(Object target, Object... arguments);
 	}
 
 	/**
@@ -447,7 +447,7 @@ public class ReflectionsUtil {
 		 *            the target object, or NULL for a static field
 		 * @return the value of the field
 		 */
-		public T get(Object target);
+        T get(Object target);
 
 		/**
 		 * Set the content of a field.
@@ -457,7 +457,7 @@ public class ReflectionsUtil {
 		 * @param value
 		 *            the new value of the field
 		 */
-		public void set(Object target, Object value);
+        void set(Object target, Object value);
 
 		/**
 		 * Determine if the given object has this field.
@@ -466,7 +466,7 @@ public class ReflectionsUtil {
 		 *            the object to test
 		 * @return TRUE if it does, FALSE otherwise
 		 */
-		public boolean hasField(Object target);
+        boolean hasField(Object target);
 	}
 
 }

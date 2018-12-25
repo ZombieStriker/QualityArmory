@@ -11,7 +11,7 @@ public enum WeaponType {
 		return isGun;
 	}
 
-	private WeaponType(boolean isGun) {
+	WeaponType(boolean isGun) {
 		this.isGun = isGun;
 	}
 

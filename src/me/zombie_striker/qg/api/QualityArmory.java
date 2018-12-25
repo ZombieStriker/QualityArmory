@@ -135,7 +135,7 @@ public class QualityArmory {
 	public static boolean isCustomItemNextId(ItemStack is) {
 		if (is == null)
 			return false;
-		List<MaterialStorage> ms = new ArrayList<MaterialStorage>();
+		List<MaterialStorage> ms = new ArrayList<>();
 		ms.addAll(QAMain.expansionPacks);
 		ms.addAll(QAMain.gunRegister.keySet());
 		ms.addAll(QAMain.armorRegister.keySet());
@@ -307,11 +307,9 @@ public class QualityArmory {
 	public static boolean isIronSights(ItemStack is) {
 		if (is == null)
 			return false;
-		if (is != null && is.getType() == IronSightsToggleItem.getMat()
-				&& is.getDurability() == IronSightsToggleItem.getData())
-			return true;
-		return false;
-	}
+        return is != null && is.getType() == IronSightsToggleItem.getMat()
+                && is.getDurability() == IronSightsToggleItem.getData();
+    }
 
 	public static ArmorObject getArmorByName(String name) {
 		for (ArmorObject g : QAMain.armorRegister.values()) {

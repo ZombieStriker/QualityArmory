@@ -287,11 +287,9 @@ public class QualityArmory {
 	public static boolean isIronSights(ItemStack is) {
 		if (is == null)
 			return false;
-		if (is != null && is.getType() == IronSightsToggleItem.getMat()
-				&& is.getDurability() == IronSightsToggleItem.getData())
-			return true;
-		return false;
-	}
+        return is != null && is.getType() == IronSightsToggleItem.getMat()
+                && is.getDurability() == IronSightsToggleItem.getData();
+    }
 
 	public static ArmorObject getArmorByName(String name) {
 		for (ArmorObject g : QAMain.armorRegister.values()) {

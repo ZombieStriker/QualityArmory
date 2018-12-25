@@ -9,7 +9,7 @@ import org.bukkit.inventory.meta.SkullMeta;
 
 public class MaterialStorage {
 
-	private static List<MaterialStorage> store = new ArrayList<MaterialStorage>();
+	private static List<MaterialStorage> store = new ArrayList<>();
 
 	public static MaterialStorage getMS(Material m, int d, int var) {
 		return getMS(m, d, var, null);

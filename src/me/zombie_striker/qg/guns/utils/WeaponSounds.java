@@ -24,7 +24,7 @@ public enum WeaponSounds {
 
 	private String soundname;
 
-	private WeaponSounds(String s) {
+	WeaponSounds(String s) {
 		this.soundname = s;
 	}
 

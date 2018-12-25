@@ -10,7 +10,7 @@ import me.zombie_striker.qg.ArmoryBaseObject;
 
 public interface ThrowableItems extends ArmoryBaseObject {
 
-	public HashMap<Entity, ThrowableHolder> throwItems = new HashMap<>();
+	HashMap<Entity, ThrowableHolder> throwItems = new HashMap<>();
 	
 	class ThrowableHolder {
 		private Entity holder;

@@ -51,7 +51,6 @@ Auto-Detect-Resourcepack: true
 sendOnJoin: true
 sendTitleOnJoin: false
 SecondsTillRPIsSent: 0.0
-SecondsTillRPIsSent: 0.0
 
 
 #QA Controls
