@@ -36,7 +36,15 @@ public class Gun extends CustomBaseObject implements ArmoryBaseObject, Comparabl
 	private double acc;
 	private double swaymultiplier = 2;
 	private int maxbull;
+	@Deprecated
 	private float damage;
+	
+	/** These values control the damage a gun can deal at various ranges - replaces the "damage" value entirely */
+    private int rangeStart;
+	private int rangeEnd;
+    private float minDamage;
+	private float maxDamage;
+	
 	private int durib = 1000;
 	private boolean isAutomatic;
 	boolean supports18 = false;
@@ -100,7 +108,11 @@ public class Gun extends CustomBaseObject implements ArmoryBaseObject, Comparabl
 		this.acc = g.acc;
 		this.swaymultiplier = g.swaymultiplier;
 		this.maxbull = g.maxbull;
-		this.damage = g.damage;
+//		this.damage = g.damage;
+		this.minDamage = g.minDamage;
+		this.maxDamage = g.maxDamage;
+		this.rangeStart = g.rangeStart;
+		this.rangeEnd = g.rangeEnd;
 		this.durib = g.durib;
 		this.isAutomatic = g.isAutomatic;
 		this.supports18 = g.supports18;
@@ -129,7 +141,6 @@ public class Gun extends CustomBaseObject implements ArmoryBaseObject, Comparabl
 		this.customProjectile = g.customProjectile;
 		this.velocity = g.velocity;
 		this.recoil = g.recoil;
-
 	}
 
 	@Deprecated
@@ -195,6 +206,38 @@ public class Gun extends CustomBaseObject implements ArmoryBaseObject, Comparabl
 	public void setDamage(float damage) {
 		this.damage = damage;
 	}
+	
+	public float getMaxDamage() {
+        return maxDamage;
+    }
+	
+	public void setMaxDamage(float maxDamage) {
+        this.maxDamage = maxDamage;
+    }
+	
+	public float getMinDamage() {
+        return minDamage;
+    }
+	
+	public void setMinDamage(float minDamage) {
+        this.minDamage = minDamage;
+    }
+	
+	public int getRangeStart() {
+        return rangeStart;
+    }
+	
+	public int getRangeEnd() {
+        return rangeEnd;
+    }
+	
+	public void setRangeStart(int rangeStart) {
+        this.rangeStart = rangeStart;
+    }
+	
+	public void setRangeEnd(int rangeEnd) {
+        this.rangeEnd = rangeEnd;
+    }
 
 	public void setDuribility(int durib) {
 		this.durib = durib;
@@ -552,6 +595,21 @@ public class Gun extends CustomBaseObject implements ArmoryBaseObject, Comparabl
 	@Override
 	public String getSoundOnHit() {
 		return null;
+	}
+	
+	public double calculateDamage(double shooterAndTargetDistance) {
+	    // Fallback
+	    if(getMaxDamage() == 0 && getMinDamage() == 0) {
+	        return this.damage;
+	    }
+	    if(shooterAndTargetDistance <= getRangeStart()) {
+	        return this.getMaxDamage();
+	    }
+	    if(shooterAndTargetDistance >= getRangeEnd()) {
+	        return this.getMinDamage();
+	    }
+	    double dmgDropoffPerBlock = (getMaxDamage() - getMinDamage()) / (getRangeEnd() - getRangeStart());
+	    return getMaxDamage() - dmgDropoffPerBlock * (shooterAndTargetDistance-getRangeStart());
 	}
 
 	@SuppressWarnings("deprecation")

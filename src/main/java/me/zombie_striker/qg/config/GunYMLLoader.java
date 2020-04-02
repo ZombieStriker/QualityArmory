@@ -293,8 +293,17 @@ public class GunYMLLoader {
 			g.setHasIronsights(f2.getBoolean("enableIronSights"));
 		if (f2.contains("maxbullets"))
 			g.setMaxBullets(f2.getInt("maxbullets"));
+		// deprecated
 		if (f2.contains("damage"))
 			g.setDamage(f2.getInt("damage"));
+		if(f2.contains("rangeStart"))
+		    g.setRangeStart(f2.getInt("rangeStart"));
+        if(f2.contains("rangeEnd"))
+            g.setRangeEnd(f2.getInt("rangeEnd"));
+        if(f2.contains("minDamage"))
+            g.setMinDamage(f2.getInt("minDamage"));
+        if(f2.contains("maxDamage"))
+            g.setMaxDamage(f2.getInt("maxDamage"));
 		if (f2.contains("durability"))
 			g.setDuribility(f2.getInt("durability"));
 		if (f2.contains("price"))

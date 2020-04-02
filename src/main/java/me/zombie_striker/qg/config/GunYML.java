@@ -74,6 +74,26 @@ public class GunYML extends ArmoryYML {
 		set(false, "swayMultiplier", multiplier);
 		return this;
 	}
+	
+	public GunYML setRangeStart(int rangeStart) {
+	    set(false, "rangeStart", rangeStart);
+	    return this;
+	}
+	
+	public GunYML setRangeEnd(int rangeEnd) {
+        set(false, "rangeEnd", rangeEnd);
+        return this;
+    }
+	
+	public GunYML setMinDamage(double minDamage) {
+        set(false, "minDamage", minDamage);
+        return this;
+    }
+	
+	public GunYML setMaxDamage(double maxDamage) {
+        set(false, "maxDamage", maxDamage);
+        return this;
+    }
 
 	public GunYML setHeadShotMultiplier(double multiplier) {
 		set(false, "headshotMultiplier", multiplier);

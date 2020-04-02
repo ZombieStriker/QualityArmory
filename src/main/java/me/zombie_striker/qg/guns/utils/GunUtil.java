@@ -195,7 +195,8 @@ public class GunUtil {
 						}
 					}
 
-					double damageMAX = damage * (bulletProtection ? 0.1 : 1)
+					double distance = p.getLocation().distance(hitTarget.getLocation());
+					double damageMAX = g.calculateDamage(distance) * (bulletProtection ? 0.1 : 1)
 							* ((headshot && !negateHeadshot) ? (QAMain.HeadshotOneHit ? 50 * g.getHeadshotMultiplier() : g.getHeadshotMultiplier())
 							: 1);
 
