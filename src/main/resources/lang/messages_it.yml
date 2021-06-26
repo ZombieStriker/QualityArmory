@@ -1,0 +1,65 @@
+# Translation created by Lorenzo0111
+
+Prefix: "&8[&2QualityArmory&8]&r"
+NoPermAnvilMessage: ' &a Non hai il permesso di usare il banco di lavoro. Usa Shift+Click
+  per accedere all''incudine.'
+NoPerm: '&c Non hai il permesso di eseguire questa azione.'
+ShopName: 'Pagina Negozio Armi:'
+CraftingBenchName: 'Pagina Banco Lavoro:'
+Missing_Ingredients: Non hai tutti i materiali per fabbricare questo.
+NoResourcepackMessage1: ' &c&l Installando la TexturePack...'
+NoResourcepackMessage2: ' &f Accetta la ResourcePack per vedere gli oggetti'
+Lore_Ammo: '&aMunizione'
+lore_bullets: '&aProiettile'
+Lore_Damage: '&aDanno'
+Lore_Durib: Durabilità
+Lore_ingredients: Ingredienti
+Lore_Variants: '&7Varianti:'
+Lore_Price: '&6Prezzo: '
+Lore_DamagePerSecond: '&2Danno Al Secondo'
+Lore_Crafts: Crafts
+Lore_Returns: Ritorna
+Reloading_Message: '[Ricarico...]'
+State_AmmoCount: '[%total%]'
+State_OutOfAmmo: '[Senza Munizioni]'
+HotbarMessage: '%name% = %amount%/%max% %state%'
+Kick_message_if_player_denied_request: "&c Sei stato cacciato perché non hai\
+  \ accettato la resourcepack. \n&f Se vuoi rientrare nel server, modifica il server\
+  \ impostando \"Risorse del Server\" a \"Sì\" o \"Su Conferma\"'"
+Lore-LMB-Single: §8[LMB] per usare la modalità Fuoco Singolo
+Lore-LMB-FullAuto: §8[Sneak]+[LMB] per usare la modalità Fuoco Automatico
+Lore-RMB-Reload: §8[RMB] per ricaricare
+Lore-Ironsights-RMB: §8[RMB] per usare il mirino
+Lore-Ironsights-Sneak: §8[Sneak] per usare il mirino
+Lore-Reload-Dropitem: §8[DropItem] per ricaricare
+Lore-Reload-RMB: §8[RMB] per ricaricare
+Lore-Helmet-RMB: §8[RMB] per indossare l elmetto
+Shop_Confirm: '&aHai comprato %item% per €%cost%!'
+Resourcepack_InCaseOfCrash: Se la ResourcePack fa crashare il tuo client, rifiuta la richiesta
+  ed usa /qa getResourcepack per scaricarla.
+Resourcepack_Download: Scarica questa resourcepack ed abilitala per vedere gli oggetti
+  personalizzati (Può richiedere qualche secondo per caricare)
+Resourcepack_NowBypass: Eseguendo questo comando sei stato aggiunto alla whitelist
+  per la resourcepack. Ora non vedrai più la richiesta.
+Resourcepack_NowOptIn: Eseguendo questo comando sei stato rimosso dalla whitelist
+  della la resourcepack. Ora vedrai le richieste di download.
+Medkit-FullyHealed: '&fHai già tutta la vita, non è necessario usarlo ora.'
+Medkit-Healing: Curando
+Medkit-Bleeding: 'Livello Perdita di Sangue:'
+Medkit-HEALING_HEARTS_AMOUNT: 1.0
+Medkit-HEALING_WEAPPING_DELAY_IN_SECONDS: 6.0
+Medkit-Lore_RMB: '&f[RMB] per curarti!'
+Bleeding:
+  Losingconsciousness: '&cSTAI PERDENDO MOLTO SANGUE!'
+  StartBleeding: '&cSTAI SANGUINANDO! TROVA UN MEDIKIT PER CURARTI!'
+  ProtectedByKevlar: '&aIl tuo vestito di Kevlar ti ha protetto da quel proiettile!'
+EntityType:
+  IRON_INGOT: IRON_INGOT
+  REDSTONE: REDSTONE
+  OAK_PLANKS: OAK_PLANKS
+  BLAZE_POWDER: BLAZE_POWDER
+  GOLD_INGOT: GOLD_INGOT
+  GUNPOWDER: GUNPOWDER
+  NETHER_STAR: NETHER_STAR
+  BLAZE_ROD: BLAZE_ROD
+  TNT: TNT
